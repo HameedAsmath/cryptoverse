@@ -6,7 +6,8 @@ import {Link} from "react-router-dom"
 import {Cryptocurrencies, News} from "../components"
 
 const Homepage = () => {
-  const {data: cryptoData, isFetching} = useGetCryptosQuery()
+  const {data: cryptoData, isFetching} = useGetCryptosQuery(10)
+  if(isFetching) return "Loading"
   const GlobalStats = cryptoData?.data?.stats
   return (
     <>
