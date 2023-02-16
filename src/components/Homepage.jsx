@@ -6,7 +6,6 @@ import millify from "millify"
 const Homepage = () => {
   const {data: cryptoData, isFetching} = useGetCryptosQuery()
   const GlobalStats = cryptoData?.data?.stats
-  console.log(GlobalStats)
   return (
     <>
       <Typography.Title level={2} className="heading">Global Crypto Stats</Typography.Title>
