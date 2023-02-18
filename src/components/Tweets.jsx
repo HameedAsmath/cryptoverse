@@ -9,7 +9,6 @@ const Tweets = () => {
   const count = 100;
   const { data, isLoading } = useGetCryptoTweetsQuery({ count });
   const tweets = data?.tweets;
-  console.log(tweets);
 
   if (isLoading) return "Loading...";
   return (
