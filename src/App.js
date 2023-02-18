@@ -6,6 +6,7 @@ import {
   News,
   Exchanges,
   Navbar,
+  Tweets
 } from "./components";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
               <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />}/>
               <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route exact path="/news" element={<News />} />
+              <Route exact path="/tweets" element={<Tweets/>}/>
             </Routes>
           </div>
         </Layout>
@@ -39,6 +41,7 @@ function App() {
           <Link to='/'>Home</Link>
           <Link to='/exchanges'>Exchanges</Link>
           <Link to='/news'>News</Link>
+          <Link to='/tweets'>Tweets</Link>
         </Space>
       </div>
     </div>
