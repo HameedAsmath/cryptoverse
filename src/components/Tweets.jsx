@@ -2,6 +2,7 @@ import React from "react";
 import { useGetCryptoTweetsQuery } from "../services/cryptoNewsApi";
 import { Row, Col, Card, Typography } from "antd";
 import moment from "moment";
+import Loader from "./Loader";
 const { Title, Text } = Typography;
 const image =
   "https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-twitter-social-media-icon-3d-png-image_6308424.png";
@@ -10,7 +11,7 @@ const Tweets = () => {
   const { data, isLoading } = useGetCryptoTweetsQuery({ count });
   const tweets = data?.tweets;
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
   return (
     <>
      <div className='home-heading-container'>

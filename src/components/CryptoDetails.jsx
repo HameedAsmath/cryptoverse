@@ -15,6 +15,7 @@ import {
   ThunderboltOutlined,
 } from "@ant-design/icons";
 import { useGetCryptoDetailsQuery } from "../services/cryptoApi";
+import Loader from "./Loader";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -24,7 +25,7 @@ const CryptoDetails = () => {
   const [timePeriod, setTimePeriod] = useState("7d");
   const { data, isLoading } = useGetCryptoDetailsQuery(coinId);
   const cryptoDetails = data?.data?.coin;
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
   const stats = [

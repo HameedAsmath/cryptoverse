@@ -3,11 +3,11 @@ import React from 'react'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import millify from "millify"
 import {Link} from "react-router-dom"
-import {Cryptocurrencies, News} from "../components"
+import {Cryptocurrencies, Loader, News} from "../components"
 
 const Homepage = () => {
-  const {data: cryptoData, isFetching} = useGetCryptosQuery(10)
-  if(isFetching) return "Loading"
+  const {data: cryptoData, isLoading} = useGetCryptosQuery(10)
+  if(isLoading) return <Loader/>
   const GlobalStats = cryptoData?.data?.stats
   return (
     <>

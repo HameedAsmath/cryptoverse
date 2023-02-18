@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { Row, Col, Select, Typography, Card } from "antd";
 import moment from "moment";
+import Loader from "./Loader";
 
 const { Title, Text } = Typography;
 
@@ -49,7 +50,7 @@ const News = ({ simplified }) => {
   }
 }
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
   return (
     <>
       <Row gutter={[24, 24]}>
@@ -105,7 +106,7 @@ const News = ({ simplified }) => {
                       ? `${news.title.substring(0, 40)}...`
                       : news.title}
                   </Title>
-                  <img src={image} alt="img" width="100px" />
+                  <img src={image} alt="img" width="50px" />
                 </div>
                 <p>
                   {news.text.length > 30
