@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Row, Col, Typography, Card, Input} from "antd"
+import {Row, Col, Card, Input} from "antd"
 import {useGetCryptosQuery} from "../services/cryptoApi"
 import {Link} from "react-router-dom"
 import millify from 'millify'
