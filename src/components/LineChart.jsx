@@ -25,7 +25,6 @@ ChartJS.register(
 );
 
 export default function LineChart({ cryptoHistory, coinName, currentPrice }) {
-  console.log(cryptoHistory);
   const coinPrice = [];
   const coinTimePeriod = [];
   for (let i = 0; i <= cryptoHistory?.data?.history?.length; i++) {
@@ -56,10 +55,6 @@ export default function LineChart({ cryptoHistory, coinName, currentPrice }) {
       legend: {
         position: "top",
       },
-      // title: {
-      //   display: true,
-      //   text: `change: ${cryptoHistory?.data?.change}`,
-      // },
     },
   };
 
