@@ -18,7 +18,7 @@ const Tweets = () => {
         <Title level={2} className="home-title">Latest Tweets on Crypto</Title>
       </div>
       <Row gutter={[24, 24]}>
-        {tweets.map((tweet, i) => (
+        {tweets?.map((tweet, i) => (
           <Col xs={24} sm={12} lg={6} key={i}>
             <Card hoverable className="tweet-card">
              
