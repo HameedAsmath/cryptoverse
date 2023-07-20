@@ -6,7 +6,6 @@ import {
   BulbOutlined,
   FundOutlined,
   MenuOutlined,
-  TwitterOutlined,
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 import icon from "../images/cryptocurrency.png";
