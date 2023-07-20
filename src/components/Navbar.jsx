@@ -56,9 +56,9 @@ const Navbar = () => {
           <Menu.Item icon={<BulbOutlined />}>
             <Link to="/news">News</Link>
           </Menu.Item>
-          <Menu.Item icon={<TwitterOutlined />}>
+          {/* <Menu.Item icon={<TwitterOutlined />}>
             <Link to="/tweets">Tweets</Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
       )}
     </div>
